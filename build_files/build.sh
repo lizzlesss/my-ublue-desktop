@@ -2,26 +2,32 @@
 
 set -ouex pipefail
 
-### Install packages
-
 # enable rpmfusion
-dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+dnf5 install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-# this installs a package from fedora repos
+# intel media driver and codecs
+dnf5 install -y intel-media-driver
+dnf5 install -y ffmpeg-full
+
+# packages
 dnf5 install -y tmux 
-dnf install -y intel-media-driver
-dnf install -y nvtop
+dnf5 install -y nvtop
 
-# Use a COPR Example:
-#
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
-# Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
+# nbfc-linux official rpm
+dnf5 install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.19/fedora-nbfc-linux-0.3.19-1.x86_64.rpm
 
-#### Example for enabling a System Unit File
+# copr repos
+dnf5 -y copr enable bieszczaders/kernel-cachyos-addons
+
+# copr packages
+dnf5 -y install scx-scheds-git
+dnf5 -y install scx-manager
+
+# disable copr repos
+dnf5 -y copr disable bieszczaders/kernel-cachyos-addons
 
 # disable rpmfusion
-dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+dnf remove -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
+#### Example for enabling a System Unit File
 systemctl enable podman.socket
