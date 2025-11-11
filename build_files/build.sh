@@ -19,8 +19,8 @@ dnf -y install \
 # nbfc-linux official rpm
 dnf5 install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.19/fedora-nbfc-linux-0.3.19-1.x86_64.rpm
 
-# legcord rpm (i just like legcord lol)
-dnf -y install https://github.com/Legcord/Legcord/releases/download/v1.1.6/Legcord-1.1.6-linux-x86_64.rpm
+# equibop rpm
+dnf -y install https://github.com/Equicord/Equibop/releases/download/v3.1.0/equibop-3.1.0.x86_64.rpm
 
 # copr repos
 dnf5 -y copr enable bieszczaders/kernel-cachyos-addons
