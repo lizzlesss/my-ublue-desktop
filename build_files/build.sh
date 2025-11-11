@@ -11,10 +11,13 @@ dnf -y install \
     ffmpeg \
     mpv
 
+dnf -y groupupdate multimedia
+
 # packages
 dnf -y install \
     nvtop \
     btop
+    intel-gpu-tools
 
 # nbfc-linux official rpm
 dnf5 install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.19/fedora-nbfc-linux-0.3.19-1.x86_64.rpm
