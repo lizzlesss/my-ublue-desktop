@@ -11,7 +11,9 @@ dnf -y install \
     ffmpeg \
     mpv
 
-dnf -y group install multimedia
+dnf -y group install \
+    multimedia \
+    fonts
 
 # packages
 dnf -y install \
