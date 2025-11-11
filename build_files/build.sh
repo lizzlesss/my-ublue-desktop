@@ -19,7 +19,8 @@ dnf -y group install \
 dnf -y install \
     nvtop \
     btop \
-    android-tools
+    android-tools \
+    mangohud
 
 # nbfc-linux official rpm
 dnf5 install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.19/fedora-nbfc-linux-0.3.19-1.x86_64.rpm
