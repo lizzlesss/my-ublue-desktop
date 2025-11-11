@@ -21,6 +21,10 @@ dnf -y install \
     btop \
     android-tools
 
+# steam
+dnf -y --setopt=install_weak_deps=False install \
+        steam
+
 # nbfc-linux official rpm
 dnf5 install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.19/fedora-nbfc-linux-0.3.19-1.x86_64.rpm
 
@@ -35,7 +39,7 @@ dnf -y install \
     scx-scheds-git \
     scx-manager \
     helium \
-    flatpak-test \
+    flatpak \
     android-udev-rules
     
 
