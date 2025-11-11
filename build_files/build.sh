@@ -19,22 +19,31 @@ dnf -y group install \
 dnf -y install \
     nvtop \
     btop \
-    intel-gpu-tools
+    android-tools
 
 # nbfc-linux official rpm
 dnf5 install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.19/fedora-nbfc-linux-0.3.19-1.x86_64.rpm
 
 # copr repos
-dnf5 -y copr enable bieszczaders/kernel-cachyos-addons
-dnf5 -y copr enable v8v88v8v88/helium
+dnf -y copr enable bieszczaders/kernel-cachyos-addons
+dnf -y copr enable v8v88v8v88/helium
+dnf -y copr enable ublue-os/flatpak-test
+dnf -y copr enable mochaa/android-udev-rules
 
 # copr packages
-dnf5 -y install scx-scheds-git
-dnf5 -y install scx-manager
-dnf5 -y install helium
+dnf -y install \
+    scx-scheds-git \
+    scx-manager \
+    helium \
+    flatpak-test \
+    android-udev-rules
+    
 
 # disable copr repos
-dnf5 -y copr disable bieszczaders/kernel-cachyos-addons
+dnf -y copr disable bieszczaders/kernel-cachyos-addons
+dnf -y copr disable v8v88v8v88/helium
+dnf -y copr disable ublue-os/flatpak-test
+dnf -y copr disable mochaa/android-udev-rules
 
 #### Example for enabling a System Unit File
 systemctl enable podman.socket
