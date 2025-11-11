@@ -16,7 +16,7 @@ dnf -y group install multimedia
 # packages
 dnf -y install \
     nvtop \
-    btop
+    btop \
     intel-gpu-tools
 
 # nbfc-linux official rpm
