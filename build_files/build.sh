@@ -21,7 +21,8 @@ dnf -y install \
     btop \
     android-tools \
     mangohud \
-    steam
+    steam \
+    jmtpfs
 
 # nbfc-linux official rpm
 dnf5 install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.19/fedora-nbfc-linux-0.3.19-1.x86_64.rpm
