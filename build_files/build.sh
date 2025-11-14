@@ -35,7 +35,7 @@ dnf -y copr enable mochaa/android-udev-rules
 
 # copr packages
 dnf -y install \
-    scx-scheds-git \
+    scx-scheds \
     scx-manager \
     helium \
     android-udev-rules
