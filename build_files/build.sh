@@ -24,7 +24,6 @@ dnf -y install \
     steam \
     jmtpfs \
     gvfs-mtp \
-    # adw-gtk3-theme \
     gnome-disk-utility
     
 # nbfc-linux official rpm
