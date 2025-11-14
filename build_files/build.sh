@@ -32,19 +32,22 @@ dnf5 install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.1
 dnf -y copr enable bieszczaders/kernel-cachyos-addons
 dnf -y copr enable v8v88v8v88/helium
 dnf -y copr enable mochaa/android-udev-rules
+dnf -y copr enable shdwchn10/xpadneo
 
 # copr packages
 dnf -y install \
     scx-scheds \
     scx-manager \
     helium \
-    android-udev-rules
+    android-udev-rules \
+    xpadneo
     
 
 # disable copr repos
 dnf -y copr disable bieszczaders/kernel-cachyos-addons
 dnf -y copr disable v8v88v8v88/helium
 dnf -y copr disable mochaa/android-udev-rules
+dnf -y copr disable shdwchn10/xpadneo
 
 #### Example for enabling a System Unit File
 systemctl enable podman.socket
