@@ -24,7 +24,8 @@ dnf -y install \
     steam \
     jmtpfs \
     gvfs-mtp \
-    gnome-disk-utility
+    gnome-disk-utility \
+    adw-gtk3-theme
     
 # nbfc-linux official rpm
 dnf5 install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.19/fedora-nbfc-linux-0.3.19-1.x86_64.rpm
