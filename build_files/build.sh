@@ -38,7 +38,7 @@ dnf -y copr enable shdwchn10/xpadneo
 
 # copr packages
 dnf -y install \
-    scx-scheds \
+    scx-scheds-git \
     scx-manager \
     helium \
     android-udev-rules \
