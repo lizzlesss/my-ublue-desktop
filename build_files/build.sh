@@ -42,7 +42,8 @@ dnf -y install \
     scx-manager \
     helium \
     android-udev-rules \
-    xpadneo
+    xpadneo \
+    ananicy-cpp
     
 
 # disable copr repos
