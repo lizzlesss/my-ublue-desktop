@@ -36,6 +36,7 @@ dnf -y copr enable v8v88v8v88/helium
 dnf -y copr enable mochaa/android-udev-rules
 dnf -y copr enable shdwchn10/xpadneo
 dnf -y copr enable sneexy/zen-browser 
+dnf -y copr enable pointy/firefox-nightly
 
 # copr packages
 dnf -y install \
@@ -45,7 +46,8 @@ dnf -y install \
     android-udev-rules \
     xpadneo \
     ananicy-cpp \
-    zen-browser 
+    zen-browser \
+    firefox-nightly
     
 
 # disable copr repos
@@ -54,6 +56,7 @@ dnf -y copr disable v8v88v8v88/helium
 dnf -y copr disable mochaa/android-udev-rules
 dnf -y copr disable shdwchn10/xpadneo
 dnf -y copr disable sneexy/zen-browser 
+dnf -y copr disable pointy/firefox-nightly
 
 #### Example for enabling a System Unit File
 systemctl enable podman.socket
