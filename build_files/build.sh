@@ -35,6 +35,7 @@ dnf -y copr enable bieszczaders/kernel-cachyos-addons
 dnf -y copr enable v8v88v8v88/helium
 dnf -y copr enable mochaa/android-udev-rules
 dnf -y copr enable shdwchn10/xpadneo
+dnf -y copr enable sneexy/zen-browser 
 
 # copr packages
 dnf -y install \
@@ -43,7 +44,8 @@ dnf -y install \
     helium \
     android-udev-rules \
     xpadneo \
-    ananicy-cpp
+    ananicy-cpp \
+    zen-browser 
     
 
 # disable copr repos
@@ -51,6 +53,7 @@ dnf -y copr disable bieszczaders/kernel-cachyos-addons
 dnf -y copr disable v8v88v8v88/helium
 dnf -y copr disable mochaa/android-udev-rules
 dnf -y copr disable shdwchn10/xpadneo
+dnf -y copr disable sneexy/zen-browser 
 
 #### Example for enabling a System Unit File
 systemctl enable podman.socket
