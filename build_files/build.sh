@@ -25,7 +25,8 @@ dnf -y install \
     jmtpfs \
     gvfs-mtp \
     gnome-disk-utility \
-    adw-gtk3-theme
+    adw-gtk3-theme \
+    foot
     
 # nbfc-linux official rpm
 dnf5 install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.19/fedora-nbfc-linux-0.3.19-1.x86_64.rpm
@@ -34,8 +35,7 @@ dnf5 install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.1
 dnf -y copr enable bieszczaders/kernel-cachyos-addons
 dnf -y copr enable mochaa/android-udev-rules
 dnf -y copr enable shdwchn10/xpadneo
-dnf -y copr enable sneexy/zen-browser 
-dnf -y copr enable pointy/firefox-nightly
+dnf -y copr enable sneexy/zen-browser
 
 # copr packages
 dnf -y install \
@@ -44,16 +44,14 @@ dnf -y install \
     android-udev-rules \
     xpadneo \
     ananicy-cpp \
-    zen-browser \
-    firefox-nightly
+    zen-browser
     
 
 # disable copr repos
 dnf -y copr disable bieszczaders/kernel-cachyos-addons
 dnf -y copr disable mochaa/android-udev-rules
 dnf -y copr disable shdwchn10/xpadneo
-dnf -y copr disable sneexy/zen-browser 
-dnf -y copr disable pointy/firefox-nightly
+dnf -y copr disable sneexy/zen-browser
 
 #### Example for enabling a System Unit File
 systemctl enable podman.socket
