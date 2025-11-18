@@ -24,8 +24,7 @@ dnf -y install \
     jmtpfs \
     gvfs-mtp \
     gnome-disk-utility \
-    adw-gtk3-theme \
-    foot
+    adw-gtk3-theme
     
 # nbfc-linux official rpm
 dnf5 install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.19/fedora-nbfc-linux-0.3.19-1.x86_64.rpm
@@ -33,7 +32,7 @@ dnf5 install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.1
 # copr repos
 dnf -y copr enable bieszczaders/kernel-cachyos-addons
 dnf -y copr enable mochaa/android-udev-rules
-dnf -y copr enable shdwchn10/xpadneo
+dnf -y copr enable sentry/xone
 dnf -y copr enable sneexy/zen-browser
 
 # copr packages
@@ -41,15 +40,20 @@ dnf -y install \
     scx-scheds-git \
     scx-manager \
     android-udev-rules \
-    xpadneo \
+    xone \
+    lpf-xone-firmware \
     ananicy-cpp \
     zen-browser
-    
+
+# enable xone from xone copr
+lpf approve xone-firmware
+lpf build xone-firmware
+lpf install xone-firmware
 
 # disable copr repos
 dnf -y copr disable bieszczaders/kernel-cachyos-addons
 dnf -y copr disable mochaa/android-udev-rules
-dnf -y copr disable shdwchn10/xpadneo
+dnf -y copr disable sentry/xone
 dnf -y copr disable sneexy/zen-browser
 
 #### Example for enabling a System Unit File
