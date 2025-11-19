@@ -34,6 +34,9 @@ dnf -y copr enable bieszczaders/kernel-cachyos-addons
 dnf -y copr enable mochaa/android-udev-rules
 dnf -y copr enable sneexy/zen-browser
 
+# trivalent repo
+dnf -y install https://repo.secureblue.dev/secureblue.repo
+
 # copr packages
 dnf -y install \
     scx-scheds-git \
@@ -41,6 +44,8 @@ dnf -y install \
     android-udev-rules \
     ananicy-cpp \
     zen-browser
+
+dnf -y install trivalent
 
 # disable copr repos
 dnf -y copr disable bieszczaders/kernel-cachyos-addons
