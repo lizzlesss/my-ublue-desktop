@@ -35,20 +35,17 @@ dnf -y install https://github.com/Legcord/Legcord/releases/download/v1.1.6/Legco
 # copr repos
 dnf -y copr enable bieszczaders/kernel-cachyos-addons
 dnf -y copr enable mochaa/android-udev-rules
-dnf -y copr enable jhuang6451/helium-browser
 
 # copr packages
 dnf -y install \
     scx-scheds-git \
     scx-manager \
     android-udev-rules \
-    ananicy-cpp \
-    helium-browser
+    ananicy-cpp 
     
 # disable copr repos
 dnf -y copr disable bieszczaders/kernel-cachyos-addons
 dnf -y copr disable mochaa/android-udev-rules
-dnf -y copr disable jhuang6451/helium-browser
 
 #### Example for enabling a System Unit File
 systemctl enable podman.socket
