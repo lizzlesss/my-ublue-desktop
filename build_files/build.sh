@@ -24,7 +24,8 @@ dnf -y install \
     jmtpfs \
     gvfs-mtp \
     gnome-disk-utility \
-    adw-gtk3-theme
+    adw-gtk3-theme \
+    btop
     
 # nbfc-linux official rpm
 dnf5 install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.19/fedora-nbfc-linux-0.3.19-1.x86_64.rpm
