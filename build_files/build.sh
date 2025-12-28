@@ -8,7 +8,6 @@ dnf5 install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release
 # intel media driver and codecs
 dnf -y install \
     intel-media-driver \
-    ffmpeg \
     mpv
 
 dnf -y group install \
@@ -21,9 +20,6 @@ dnf -y install \
     android-tools \
     mangohud \
     steam \
-    jmtpfs \
-    gvfs-mtp \
-    gnome-disk-utility \
     adw-gtk3-theme \
     btop
     
