@@ -17,7 +17,6 @@ dnf -y group install \
 
 # packages
 dnf -y install \
-    nvtop \
     android-tools \
     mangohud \
     steam \
