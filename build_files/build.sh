@@ -8,6 +8,7 @@ dnf5 install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release
 # intel media driver and codecs
 dnf -y install \
     intel-media-driver \
+    intel-vaapi-driver \
     mpv
 
 dnf -y group install \
