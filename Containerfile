@@ -5,8 +5,6 @@ COPY build_files /
 # Base Image
 FROM ghcr.io/zirconium-dev/zirconium:latest
 
-## by the package manager.
-
 # RUN rm /opt && mkdir /opt
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
