@@ -11,11 +11,9 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
-    rm -f /usr/bin/chsh && \
-    rm -f /usr/bin/lchsh && \
-    /ctx/pkgs.sh
-    /ctx/kernel.sh
-    /ctx/initramfs.sh
+    /ctx/build.sh
+    #/ctx/kernel.sh
+    #/ctx/initramfs.sh
     
 ### LINTING
 ## Verify final image and contents are correct.
