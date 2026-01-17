@@ -32,7 +32,7 @@ dnf5 install -y \
     kernel-cachyos-modules \
     kernel-cachyos-core
 
-KERNEL_VERSION="$(rpm -q --qf '%{VERSION}-%{RELEASE}.%{ARCH}\n' kernel-cachyos-lts)"
+KERNEL_VERSION="$(rpm -q --qf '%{VERSION}-%{RELEASE}.%{ARCH}\n' kernel-cachyos)"
 
 # Depmod (required for fedora 43+)
 depmod -a "${KERNEL_VERSION}"
