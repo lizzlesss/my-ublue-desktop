@@ -6,8 +6,8 @@ set -ouex pipefail
 
 
 #if [[ "$edition" == "workstation" ]]; then
-    /ctx/packages/kernel.sh \
-    /ctx/packages/pkgs.sh 
+/ctx/packages/kernel.sh
+/ctx/packages/pkgs.sh 
 
 #else
     #echo "Invalid edition specified. Please use 'workstation' or 'multimedia'."
