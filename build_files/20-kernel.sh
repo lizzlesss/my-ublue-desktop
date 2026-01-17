@@ -45,7 +45,7 @@ if [[ -f "${VMLINUZ_SOURCE}" ]]; then
 fi
 
 # Lock kernel packages
-dnf5 versionlock add "kernel-cachyos-lts-${KERNEL_VERSION}" || true
+dnf5 versionlock add "kernel-cachyos-${KERNEL_VERSION}" || true
 dnf5 versionlock add "kernel-cachyos-modules-${KERNEL_VERSION}" || true
 
 
