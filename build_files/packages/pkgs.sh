@@ -11,7 +11,6 @@ dnf -y install \
     intel-vaapi-driver
 
 dnf -y group install \
-    multimedia \
     fonts
 
 # packages
