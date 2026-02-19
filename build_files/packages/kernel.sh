@@ -10,7 +10,7 @@ dnf5 install -y \
     libcap-ng libcap-ng-devel bore-sysctl cachyos-ksm-settings procps-ng procps-ng-devel uksmd libbpf scx-scheds-git scx-tools scx-manager cachyos-settings ananicy-cpp
 
 # Adds the longterm kernel repo
-dnf5 copr enable -y bieszczaders/kernel-cachyos
+dnf5 copr enable -y predze/kernel-cachyos
 
 # Remove useless kernels
 readarray -t OLD_KERNELS < <(rpm -qa 'kernel-*')
@@ -23,7 +23,7 @@ fi
 
 # Install kernel packages (noscripts required for 43+)
 dnf5 install -y \
-    --enablerepo="copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos" \
+    --enablerepo="copr:copr.fedorainfracloud.org:predze:kernel-cachyos" \
     --allowerasing \
     --setopt=tsflags=noscripts \
     kernel-cachyos \
