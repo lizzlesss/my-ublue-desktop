@@ -2,6 +2,7 @@
 set -eoux pipefail
 
 dnf5 copr enable -y bieszczaders/kernel-cachyos-lto
+dnf5 copr enable -y bieszczaders/kernel-cachyos-addons
 
 # Adds required package for the scheduler
 dnf5 install -y \
