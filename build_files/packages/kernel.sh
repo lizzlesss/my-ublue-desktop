@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 set -eoux pipefail
 
-dnf5 copr enable -y bieszczaders/kernel-cachyos-addons
+dnf5 copr enable -y bieszczaders/kernel-cachyos-lto
 
 # Adds required package for the scheduler
 dnf5 install -y \
@@ -23,14 +23,14 @@ fi
 
 # Install kernel packages (noscripts required for 43+)
 dnf5 install -y \
-    --enablerepo="copr:copr.fedorainfracloud.org:predze:kernel-cachyos" \
+    --enablerepo="copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-lto" \
     --allowerasing \
     --setopt=tsflags=noscripts \
-    kernel-cachyos \
-    kernel-cachyos-devel-matched \
-    kernel-cachyos-devel \
-    kernel-cachyos-modules \
-    kernel-cachyos-core
+    kernel-cachyos-lto \
+    kernel-cachyos-lto-devel-matched \
+    kernel-cachyos-lto-devel \
+    kernel-cachyos-lto-modules \
+    kernel-cachyos-lto-core
 
 KERNEL_VERSION="$(rpm -q --qf '%{VERSION}-%{RELEASE}.%{ARCH}\n' kernel-cachyos)"
 
@@ -45,8 +45,8 @@ if [[ -f "${VMLINUZ_SOURCE}" ]]; then
 fi
 
 # Lock kernel packages
-dnf5 versionlock add "kernel-cachyos-${KERNEL_VERSION}" || true
-dnf5 versionlock add "kernel-cachyos-modules-${KERNEL_VERSION}" || true
+dnf5 versionlock add "kernel-cachyos-lto-${KERNEL_VERSION}" || true
+dnf5 versionlock add "kernel-cachyos-lto-modules-${KERNEL_VERSION}" || true
 
 
 # Thank you @renner03 for this part
