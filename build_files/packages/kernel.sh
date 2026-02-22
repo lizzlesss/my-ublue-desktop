@@ -1,7 +1,6 @@
 #!/usr/bin/bash
 set -eoux pipefail
 
-dnf5 copr enable -y bieszczaders/kernel-cachyos-lto
 dnf5 copr enable -y bieszczaders/kernel-cachyos-addons
 
 # Adds required package for the scheduler
@@ -10,8 +9,7 @@ dnf5 install -y \
     --allowerasing \
     libcap-ng libcap-ng-devel bore-sysctl cachyos-ksm-settings procps-ng procps-ng-devel uksmd libbpf scx-scheds-git scx-tools scx-manager cachyos-settings ananicy-cpp
 
-# Adds the longterm kernel repo
-dnf5 copr enable -y predze/kernel-cachyos
+dnf5 copr enable -y bieszczaders/kernel-cachyos-lto
 
 # Remove useless kernels
 readarray -t OLD_KERNELS < <(rpm -qa 'kernel-*')
