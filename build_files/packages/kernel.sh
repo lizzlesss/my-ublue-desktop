@@ -3,15 +3,6 @@ set -eoux pipefail
 
 dnf copr enable -y sentry/kernel-blu
 
-# Remove useless kernels
-readarray -t OLD_KERNELS < <(rpm -qa 'kernel-*')
-if (( ${#OLD_KERNELS[@]} )); then
-    rpm -e --justdb --nodeps "${OLD_KERNELS[@]}"
-    dnf5 versionlock delete "${OLD_KERNELS[@]}" || true
-    rm -rf /usr/lib/modules/*
-    rm -rf /lib/modules/*
-fi
-
 dnf remove -y \
     --installed-from-repo=fedora \
     kernel \
@@ -20,6 +11,15 @@ dnf remove -y \
     kernel-modules \
     kernel-modules-core \
     kernel-core
+
+# Remove useless kernels
+readarray -t OLD_KERNELS < <(rpm -qa 'kernel-*')
+if (( ${#OLD_KERNELS[@]} )); then
+    rpm -e --justdb --nodeps "${OLD_KERNELS[@]}"
+    dnf5 versionlock delete "${OLD_KERNELS[@]}" || true
+    rm -rf /usr/lib/modules/*
+    rm -rf /lib/modules/*
+fi
 
 # Install kernel packages (noscripts required for 43+)
 dnf install -y \
