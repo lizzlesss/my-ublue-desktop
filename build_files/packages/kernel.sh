@@ -21,6 +21,7 @@ dnf install -y \
     kernel-devel-matched \
     kernel-devel \
     kernel-modules \
+    kernel-modules-core \
     kernel-core
 
 KERNEL_VERSION="$(rpm -q --qf '%{VERSION}-%{RELEASE}.%{ARCH}\n' kernel)"
