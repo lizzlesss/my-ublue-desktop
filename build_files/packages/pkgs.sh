@@ -24,7 +24,7 @@ dnf -y install \
 dnf install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.19/fedora-nbfc-linux-0.3.19-1.x86_64.rpm
 
 dnf -y copr enable mochaa/android-udev-rules
-dnf -y copr enable crono/system76-scheduler
+dnf -y copr enable kylegospo/system76-scheduler 
 dnf -y copr enable crono/scx-scheds-cargo
 
 # copr packages
@@ -32,10 +32,10 @@ dnf -y install \
     android-udev-rules
     scx-scheds-git
     scx-tools-git
-    system76-scheduler-git
+    system76-scheduler
     
 dnf -y copr disable mochaa/android-udev-rules
-dnf -y copr disable crono/system76-scheduler
+dnf -y copr disable kylegospo/system76-scheduler 
 dnf -y copr disable crono/scx-scheds-cargo
 
 systemctl enable podman.socket
