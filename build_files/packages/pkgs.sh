@@ -29,9 +29,9 @@ dnf -y copr enable crono/scx-scheds-cargo
 
 # copr packages
 dnf -y install \
-    android-udev-rules
-    scx-scheds-git
-    scx-tools-git
+    android-udev-rules \
+    scx-scheds-git \ 
+    scx-tools-git \
     system76-scheduler
     
 dnf -y copr disable mochaa/android-udev-rules
