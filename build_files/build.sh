@@ -6,7 +6,7 @@ set -ouex pipefail
 
 
 #if [[ "$edition" == "workstation" ]]; then
-#/ctx/packages/kernel.sh
+/ctx/packages/kernel.sh
 /ctx/packages/pkgs.sh 
 
 #else
