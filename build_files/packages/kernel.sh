@@ -13,8 +13,7 @@ if (( ${#OLD_KERNELS[@]} )); then
 fi
 
 dnf remove -y \
-    --allowerasing \
-    --setopt=tsflags=noscripts \
+    --installed-from-repo=fedora \
     kernel \
     kernel-devel-matched \
     kernel-devel \
