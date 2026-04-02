@@ -12,6 +12,16 @@ if (( ${#OLD_KERNELS[@]} )); then
     rm -rf /lib/modules/*
 fi
 
+dnf remove -y \
+    --allowerasing \
+    --setopt=tsflags=noscripts \
+    kernel \
+    kernel-devel-matched \
+    kernel-devel \
+    kernel-modules \
+    kernel-modules-core \
+    kernel-core
+
 # Install kernel packages (noscripts required for 43+)
 dnf install -y \
     --enablerepo="copr:copr.fedorainfracloud.org:sentry:kernel-blu" \
@@ -27,7 +37,7 @@ dnf install -y \
 KERNEL_VERSION="$(rpm -q --qf '%{VERSION}-%{RELEASE}.%{ARCH}\n' kernel)"
 
 # Depmod (required for fedora 43+)
-# depmod -a "${KERNEL_VERSION}"
+depmod -a "${KERNEL_VERSION}"
 
 # Copy vmlinuz
 VMLINUZ_SOURCE="/usr/lib/kernel/vmlinuz-${KERNEL_VERSION}"
