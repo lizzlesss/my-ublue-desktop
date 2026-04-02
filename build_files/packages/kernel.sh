@@ -27,7 +27,7 @@ dnf install -y \
 KERNEL_VERSION="$(rpm -q --qf '%{VERSION}-%{RELEASE}.%{ARCH}\n' kernel)"
 
 # Depmod (required for fedora 43+)
-depmod -a "${KERNEL_VERSION}"
+# depmod -a "${KERNEL_VERSION}"
 
 # Copy vmlinuz
 VMLINUZ_SOURCE="/usr/lib/kernel/vmlinuz-${KERNEL_VERSION}"
