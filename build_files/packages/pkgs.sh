@@ -32,8 +32,8 @@ dnf -y install \
     android-udev-rules \
     system76-scheduler-git
     
-dnf -y copr disable mochaa/android-udev-rules fedora-rawhide-x86_64
-dnf -y copr disable kylegospo/system76-scheduler fedora-rawhide-x86_64
+dnf -y copr disable mochaa/android-udev-rules
+dnf -y copr disable kylegospo/system76-scheduler
 
 systemctl enable podman.socket
 
