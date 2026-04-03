@@ -25,20 +25,15 @@ dnf install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.19
 
 dnf -y copr enable mochaa/android-udev-rules
 dnf -y copr enable kylegospo/system76-scheduler 
-dnf -y copr enable crono/scx-scheds-cargo
-dnf -y copr enable linuxgamerlife/lgl-scxctl-manager
+
 
 # copr packages
 dnf -y install \
     android-udev-rules \
-    scx-scheds-git \
-    scx-tools-git \
-    lgl-scxctl-manager \
     system76-scheduler
     
 dnf -y copr disable mochaa/android-udev-rules
-dnf -y copr disable kylegospo/system76-scheduler 
-dnf -y copr disable crono/scx-scheds-cargo
+dnf -y copr disable kylegospo/system76-scheduler
 
 systemctl enable podman.socket
 
