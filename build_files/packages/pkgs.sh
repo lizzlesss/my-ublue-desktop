@@ -33,7 +33,7 @@ dnf -y install \
     system76-scheduler-git
     
 dnf -y copr disable mochaa/android-udev-rules
-dnf -y copr disable kylegospo/system76-scheduler
+dnf -y copr disable crono/system76-scheduler
 
 systemctl enable podman.socket
 
