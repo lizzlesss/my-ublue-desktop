@@ -21,7 +21,7 @@ dnf -y install \
     waydroid
     
 # nbfc-linux official rpm
-dnf install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.19/fedora-nbfc-linux-0.3.19-1.x86_64.rpm
+dnf install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.4.0/fedora-nbfc-linux-0.4.0-1.x86_64.rpm
 
 dnf -y copr enable mochaa/android-udev-rules fedora-rawhide-x86_64
 dnf -y copr enable crono/system76-scheduler fedora-rawhide-x86_64
