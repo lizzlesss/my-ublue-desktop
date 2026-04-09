@@ -26,20 +26,17 @@ dnf install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.3.19
 dnf -y copr enable mochaa/android-udev-rules fedora-rawhide-x86_64
 dnf -y copr enable crono/system76-scheduler fedora-rawhide-x86_64
 dnf -y copr enable sneed/llama-cpp-vulkan fedora-rawhide-x86_64
-dnf -y copr enable imput/helium fedora-rawhide-x86_64
 
 
 # copr packages
 dnf -y install \
     android-udev-rules \
     system76-scheduler-git \
-    llama-cpp \
-    helium-bin
+    llama-cpp
     
 dnf -y copr disable mochaa/android-udev-rules
 dnf -y copr disable crono/system76-scheduler
 dnf -y copr disable sneed/llama-cpp-vulkan
-dnf -y copr disable imput/helium
 
 systemctl enable podman.socket
 
