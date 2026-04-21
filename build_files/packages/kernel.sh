@@ -3,7 +3,7 @@ set -eoux pipefail
 
 dnf install -y dnf5-plugins
 
-dnf copr enable -y bieszczaders/kernel-cachyos-addons fedora-rawhide-x86_64
+dnf copr enable -y bieszczaders/kernel-cachyos-addons
 
 # Adds required package for the scheduler
 dnf install -y \
@@ -11,7 +11,7 @@ dnf install -y \
     --allowerasing \
     libcap-ng libcap-ng-devel bore-sysctl cachyos-ksm-settings procps-ng procps-ng-devel uksmd libbpf scx-scheds-git scx-tools scx-manager cachyos-settings ananicy-cpp
 
-dnf copr enable -y bieszczaders/kernel-cachyos-lto fedora-rawhide-x86_64
+dnf copr enable -y bieszczaders/kernel-cachyos-lto
 
 # Remove useless kernels
 readarray -t OLD_KERNELS < <(rpm -qa 'kernel-*')
