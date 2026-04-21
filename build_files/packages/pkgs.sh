@@ -4,7 +4,7 @@ set -eoux pipefail
 
 #dnf -y install intel-media-driver
 
-dnf -y group install \
+dnf -y install \
     google-noto-sans-cjk-fonts \
     google-noto-serif-cjk-fonts
 
