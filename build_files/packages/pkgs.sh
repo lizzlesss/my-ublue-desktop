@@ -2,22 +2,16 @@
 
 set -eoux pipefail
 
-# enable rpmfusion
-dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
-# intel media driver and codecs
-dnf -y install \
-    intel-media-driver
+#dnf -y install intel-media-driver
 
 dnf -y group install \
-    fonts
+    google-noto-sans-cjk-fonts \
+    google-noto-serif-cjk-fonts
 
 # packages
 dnf -y install \
     android-tools \
     mangohud \
-    steam \
-    adw-gtk3-theme \
     waydroid
     
 # nbfc-linux official rpm
