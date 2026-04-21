@@ -27,6 +27,12 @@ dnf install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.4.1/
 dnf -y copr enable mochaa/android-udev-rules fedora-rawhide-x86_64
 dnf -y copr enable crono/system76-scheduler fedora-rawhide-x86_64
 dnf -y copr enable sneed/llama-cpp-vulkan fedora-rawhide-x86_64
+dnf -y copr enable bieszczaders/kernel-cachyos-addons fedora-rawhide-x86-64
+
+dnf install -y \
+    --enablerepo="copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons" \
+    --allowerasing \
+    libcap-ng libcap-ng-devel cachyos-ksm-settings procps-ng procps-ng-devel uksmd libbpf scx-scheds-git scx-tools scx-manager cachyos-settings ananicy-cpp
 
 dnf -y install \
     android-udev-rules \
@@ -36,6 +42,7 @@ dnf -y install \
 dnf -y copr disable mochaa/android-udev-rules
 dnf -y copr disable crono/system76-scheduler
 dnf -y copr disable sneed/llama-cpp-vulkan
+dnf -y copr disable bieszczaders/kernel-cachyos-addons
 
 systemctl enable podman.socket
 
