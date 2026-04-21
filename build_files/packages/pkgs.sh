@@ -7,7 +7,7 @@ dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-
 
 # intel media driver and codecs
 dnf -y install \
-    intel-media-driver 
+    intel-media-driver
 
 dnf -y group install \
     fonts
@@ -32,7 +32,6 @@ dnf -y install \
     llama-cpp
     
 dnf -y copr disable mochaa/android-udev-rules
-dnf -y copr disable crono/system76-scheduler
 dnf -y copr disable sneed/llama-cpp-vulkan
 
 systemctl enable podman.socket
