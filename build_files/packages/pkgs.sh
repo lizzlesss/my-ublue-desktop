@@ -29,14 +29,17 @@ dnf install -y \
 
 dnf -y copr enable mochaa/android-udev-rules
 dnf -y copr enable sneed/llama-cpp-vulkan
+dnf -y copr enable codifryed/CoolerControl
 
 dnf -y install \
     android-udev-rules \
-    llama-cpp
+    llama-cpp \
+    coolercontrol
     
 dnf -y copr disable mochaa/android-udev-rules
 dnf -y copr disable sneed/llama-cpp-vulkan
 dnf -y copr disable bieszczaders/kernel-cachyos-addons
+dnf -y copr disable codifryed/CoolerControl
 
 systemctl enable podman.socket
 
