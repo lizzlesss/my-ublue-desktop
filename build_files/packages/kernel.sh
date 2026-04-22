@@ -1,8 +1,6 @@
 #!/usr/bin/bash
 set -eoux pipefail
 
-dnf install -y dnf5-plugins
-
 #dnf copr enable -y bieszczaders/kernel-cachyos-addons
 
 # Adds required package for the scheduler
