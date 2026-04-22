@@ -12,7 +12,6 @@ dnf -y install \
 dnf -y install \
     android-tools \
     mangohud \
-    waydroid \
     powertop \
     intel-lpmd
     
