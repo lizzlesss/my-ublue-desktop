@@ -3,13 +3,13 @@ set -eoux pipefail
 
 dnf install -y dnf5-plugins
 
-dnf copr enable -y bieszczaders/kernel-cachyos-addons
+#dnf copr enable -y bieszczaders/kernel-cachyos-addons
 
 # Adds required package for the scheduler
-dnf install -y \
-    --enablerepo="copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons" \
-    --allowerasing \
-    libcap-ng libcap-ng-devel bore-sysctl cachyos-ksm-settings procps-ng procps-ng-devel uksmd libbpf scx-scheds-git scx-tools scx-manager cachyos-settings ananicy-cpp
+#dnf install -y \
+    #--enablerepo="copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons" \
+    #--allowerasing \
+    #libcap-ng libcap-ng-devel bore-sysctl cachyos-ksm-settings procps-ng procps-ng-devel uksmd libbpf scx-scheds-git scx-tools-git scx-manager cachyos-settings ananicy-cpp
 
 dnf copr enable -y bieszczaders/kernel-cachyos-lto
 
