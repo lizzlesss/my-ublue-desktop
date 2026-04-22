@@ -13,7 +13,8 @@ dnf -y install \
     android-tools \
     mangohud \
     waydroid \
-    powertop
+    powertop \
+    intel-lpmd
     
 # nbfc-linux official rpm
 dnf install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.4.1/fedora-nbfc-linux-0.4.1-1.x86_64.rpm
