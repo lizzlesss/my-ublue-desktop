@@ -23,7 +23,6 @@ dnf install -y \
     --allowerasing \
     libcap-ng libcap-ng-devel bore-sysctl cachyos-ksm-settings procps-ng procps-ng-devel uksmd libbpf scx-scheds-git scx-tools-git cachyos-settings ananicy-cpp
 
-
 dnf -y copr enable mochaa/android-udev-rules
 dnf -y copr enable sneed/llama-cpp-vulkan
 
