@@ -12,11 +12,7 @@ dnf -y install \
 dnf -y install \
     android-tools \
     mangohud \
-    powertop \
-    intel-lpmd
-    
-# nbfc-linux official rpm
-dnf install -y https://github.com/nbfc-linux/nbfc-linux/releases/download/0.4.1/fedora-nbfc-linux-0.4.1-1.x86_64.rpm
+    powertop 
 
 # copr
 dnf copr enable -y bieszczaders/kernel-cachyos-addons
@@ -25,7 +21,7 @@ dnf copr enable -y bieszczaders/kernel-cachyos-addons
 dnf install -y \
     --enablerepo="copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons" \
     --allowerasing \
-    libcap-ng libcap-ng-devel bore-sysctl cachyos-ksm-settings procps-ng procps-ng-devel uksmd libbpf scx-scheds-git scx-tools-git scx-manager cachyos-settings ananicy-cpp
+    libcap-ng libcap-ng-devel bore-sysctl cachyos-ksm-settings procps-ng procps-ng-devel uksmd libbpf scx-scheds-git scx-tools-git cachyos-settings ananicy-cpp
 
 
 dnf -y copr enable mochaa/android-udev-rules
