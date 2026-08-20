@@ -11,8 +11,7 @@ dnf -y install \
 # packages
 dnf -y install \
     android-tools \
-    mangohud \
-    powertop 
+    mangohud
 
 # copr
 dnf copr enable -y bieszczaders/kernel-cachyos-addons
@@ -21,17 +20,14 @@ dnf copr enable -y bieszczaders/kernel-cachyos-addons
 dnf install -y \
     --enablerepo="copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons" \
     --allowerasing \
-    libcap-ng libcap-ng-devel bore-sysctl cachyos-ksm-settings procps-ng procps-ng-devel uksmd libbpf scx-scheds-git scx-tools-git scx-manager cachyos-settings ananicy-cpp
+    libcap-ng libcap-ng-devel cachyos-ksm-settings procps-ng procps-ng-devel uksmd libbpf cachyos-settings ananicy-cpp
 
 dnf -y copr enable mochaa/android-udev-rules
-dnf -y copr enable sneed/llama-cpp-vulkan
 
 dnf -y install \
-    android-udev-rules \
-    llama-cpp
+    android-udev-rules
     
 dnf -y copr disable mochaa/android-udev-rules
-dnf -y copr disable sneed/llama-cpp-vulkan
 dnf -y copr disable bieszczaders/kernel-cachyos-addons
 
 systemctl enable podman.socket
