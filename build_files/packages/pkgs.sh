@@ -7,7 +7,8 @@ set -eoux pipefail
 # packages
 dnf -y install \
     android-tools \
-    mangohud
+    mangohud \
+    intel-lpmd
 
 # copr
 dnf copr enable -y bieszczaders/kernel-cachyos-addons
