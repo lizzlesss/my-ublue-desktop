@@ -25,7 +25,3 @@ dnf -y install \
     
 dnf -y copr disable mochaa/android-udev-rules
 dnf -y copr disable bieszczaders/kernel-cachyos-addons
-
-systemctl enable podman.socket
-
-#### Example for enabling a System Unit File
