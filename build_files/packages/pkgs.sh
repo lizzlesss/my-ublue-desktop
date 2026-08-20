@@ -8,7 +8,9 @@ set -eoux pipefail
 dnf -y install \
     android-tools \
     mangohud \
-    intel-lpmd
+    intel-lpmd \
+    https://github.com/nbfc-linux/nbfc-linux/releases/download/0.5.3/fedora-44-nbfc-linux-0.5.3-1.x86_64.rpm
+    
 
 # copr
 dnf copr enable -y bieszczaders/kernel-cachyos-addons
